@@ -1,0 +1,232 @@
+@CHARSET "UTF-8";
+
+@media screen and (max-width: 1365px) {
+    div.carousel.fp .buttons.prev {
+        right:70% !important;
+    }
+    div.carousel.fp .buttons.next {
+        left: 70% !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    div.carousel.fp {
+        height: auto !important;
+    }
+
+	div.carousel.fp div.viewport, div.carousel.fp div.viewport li, div.carousel.fp div.viewport li .carousel-item  {
+	    width: 470px !important;
+        height: 350px !important;
+	}
+
+    div.carousel.fp div.viewport {
+        height: 505px !important;
+    }
+
+    div.carousel.fp.notitle div.viewport {
+        height: 480px !important;
+    }
+
+    div.carousel.fp div.viewport ul.overview li div.texts {
+        width: 470px !important;
+        left: 0px !important;
+    }
+
+    div.carousel.fp > h1 {
+        margin: 24px 0 !important;
+    }
+
+	div.carousel.fp .buttons.prev {
+	    position: absolute;
+        left: 85px;
+        right: auto !important;
+        bottom: 310px;
+	}
+	div.carousel.fp .buttons.next {
+	    position: absolute;
+        right: 85px;
+        left: auto !important;
+        bottom: 310px;
+    }
+/*    div.carousel.fp .texts {
+        display: block !important;
+    }*/
+}
+
+@media screen and (max-width: 700px) {
+    div.carousel.fp div.viewport, div.carousel.fp div.viewport li, div.carousel.fp div.viewport li .carousel-item  {
+        width: 280px !important;
+        height: 210px !important;
+    }
+
+    div.carousel.fp div.viewport {
+        height: 355px !important;
+    }
+
+    div.carousel.fp.notitle div.viewport {
+        height: 350px !important;
+    }
+
+    div.carousel.fp div.viewport ul.overview li div.texts {
+        width:  240px !important;
+        left: 20px !important;
+    }
+
+    div.carousel.fp div.viewport ul.overview li div.texts a.title {
+        font-size: 20px !important;
+        max-height: 90px !important;
+        margin-top: 5px !important;
+    }
+
+    div.carousel.fp div.viewport ul.overview li div.texts a.category {
+        font-size: 10px !important;
+    }
+
+    div.carousel.fp .buttons {
+        height: 30px !important;
+        bottom: 70px !important;
+        line-height: normal;
+    }
+
+    div.carousel.fp .buttons.prev {
+        left: auto !important;
+        right: 90% !important;
+    }
+
+    div.carousel.fp .buttons.next {
+        right: auto !important;
+        left: 90% !important;
+    }
+}
+
+div.carousel.fp {
+	overflow: hidden;
+	padding: 0;
+	background-color: lightblue;
+	height:450px;
+    position: relative;
+}
+
+div.carousel.fp.notitle {
+    height: 390px;
+}
+
+div.carousel.fp > h1 {
+	text-align:center;
+	margin: 30px 0;
+	text-transform: uppercase;
+	font-family: 'OpenSans-Bold', Arial, sans-serif;
+	font-size: 20px;
+
+}
+
+div.carousel.fp div.silhoutte {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-color: #000000;
+    z-index: 1;
+}
+
+div.carousel.fp div.viewport {
+	width: 990px;
+	height: 490px;
+	overflow: hidden;
+	position: relative;
+	margin:auto;
+}
+div.carousel.fp div.viewport ul.overview {
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top:  0;
+}
+
+div.carousel.fp div.viewport ul.overview li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+	margin-right: 45px;
+}
+div.carousel.fp div.viewport ul.overview li div.carousel-item {
+	width:300px;
+	height: 225px;
+    overflow: hidden;
+    background-size: cover;
+    -ms-behavior: url(backgroundsize.min.htc);
+    background-repeat: no-repeat;
+    background-position: center;
+	display:table;
+}
+
+div.carousel.fp div.viewport ul.overview li div.carousel-item p.no-image{
+	margin:0;
+	padding:10px;
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	font-family: 'OpenSans-Bold', Arial, sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+div.carousel.fp div.viewport ul.overview li div.texts{
+    text-align: center;
+	margin-top:12px;
+    width: 400px;
+    position: relative;
+    left: -50px;
+    display: none;
+}
+div.carousel.fp div.viewport ul.overview li div.texts a.category{
+    font-family: 'OpenSans-Regular', Arial, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #404040;
+    margin-top: 15px;
+}
+div.carousel.fp div.viewport ul.overview li div.texts a.title{
+    font-family: 'OpenSans-Bold', Arial, sans-serif;
+	font-size: 22px;
+	display: block;
+	margin-top: 13px;
+    line-height: 28px;
+    max-height: 60px;
+    overflow: hidden;
+	text-decoration:none;
+}
+
+div.carousel.fp .buttons {
+	display: inline-block;
+	margin: 0;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+	font-size: 35px;
+	position:relative;
+	bottom:225px;
+	z-index:100;
+	font-family: 'OpenSans-Semibold', Arial, sans-serif;
+}
+
+div.carousel.fp .buttons.prev {
+	float:right;
+	right:65%;
+}
+div.carousel.fp .buttons.next {
+    left: 65%;
+}
+
+div.carousel.fp .buttons:hover {
+	color: #C01313;
+}
+
+div.carousel.fp .disable {
+	visibility: hidden;
+}
+
