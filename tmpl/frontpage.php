@@ -21,9 +21,9 @@ foreach($scripts as $script) {
         break;
     }
 }
-// if(!$scriptFound) {
-//     $document->addScript("//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js");
-// }
+ if(!$scriptFound) {
+     $document->addScript("//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js");
+}
 
 $document->addScript($modulePath.'tmpl/js/fp_scripts.js');
 $document->addScript($modulePath.'tmpl/js/jquery.tinycarousel.min.js');

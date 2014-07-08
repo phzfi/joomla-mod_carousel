@@ -11,6 +11,7 @@
     <authorUrl>http://www.phz.fi</authorUrl>
     <version>1.0.0</version>
 	<description>MOD_CAROUSEL_XML_DESCRIPTION</description>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<files>
 		<filename module="mod_carousel">mod_carousel.php</filename>
 		<folder>tmpl</folder>
@@ -18,7 +19,8 @@
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
 		<filename>mod_carousel.xml</filename>
-	</files>
+        <filename>LICENSE.txt</filename>	
+        </files>
 	<languages>
 		<language tag="en-GB">en-GB.mod_carousel.ini</language>
 		<language tag="en-GB">en-GB.mod_carousel.sys.ini</language>
