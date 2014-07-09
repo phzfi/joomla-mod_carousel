@@ -9,7 +9,7 @@
 // no direct access
 defined ( '_JEXEC' ) or die ();
 $document = JFactory::getDocument();
-$modulePath = JURI::base() . 'modules/mod_carousel/';
+$modulePath = JURI::base() . 'modules/mod_phz_articles_carousel/';
 
 
 $scripts = array_keys($document->_scripts);
@@ -21,9 +21,10 @@ foreach($scripts as $script) {
         break;
     }
 }
- if(!$scriptFound) {
+
+if(!$scriptFound) {
      $document->addScript("//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js");
- }
+}
 
 $document->addScript($modulePath.'tmpl/js/scripts.js');
 $document->addScript($modulePath.'tmpl/js/jquery.tinycarousel.min.js');
@@ -62,8 +63,12 @@ $document->addStyleSheet($modulePath.'tmpl/css/stylesheet.css');
 	       ">
                 <div class="carousel-item"
                 	style="
-                		<?php if(isset($item->image) && $item->image != ''){?>
-                				background-image:url( <?php echo JURI::root() . $item->image; ?>);
+                		<?php
+                        if(isset($item->image) && $item->image != '' && (strpos($item->image, "http") === FALSE && strpos($item->image, "www") === FALSE)) {
+                            $item->image = JURI::base() . $item->image;
+                        }
+                         if(isset($item->image) && $item->image != ''){?>
+                				background-image:url( <?php echo $item->image; ?>);
                 		<?php }?>
                 		<?php if(isset($background_color) && $background_color != ''){?>
 					       		background-color: <?php echo $background_color; ?>;

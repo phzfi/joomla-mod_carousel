@@ -13,7 +13,7 @@ require_once JPATH_SITE.'/components/com_content/helpers/route.php';
 
 jimport('joomla.application.component.model');
 
-JModel::addIncludePath(JPATH_SITE.'/components/com_content/models', 'ContentModel');
+JModelLegacy::addIncludePath(JPATH_SITE.'/components/com_content/models', 'ContentModel');
 
 abstract class modCarouselHelper
 {
@@ -23,7 +23,7 @@ public static function getList(&$params)
 		$db = JFactory::getDbo();
 
 		// Get an instance of the generic articles model
-		$model = JModel::getInstance('Articles', 'ContentModel', array('ignore_request' => true));
+		$model = JModelLegacy::getInstance('Articles', 'ContentModel', array('ignore_request' => true));
 
 		// Set application parameters in model
 		$app = JFactory::getApplication();
@@ -109,12 +109,13 @@ public static function getList(&$params)
 				$item->categoryLink = $item->link;
 			}
 			$doc = new DOMDocument();
-			@$doc->loadHTML($item->introtext);
+			@$doc->loadHTML($item->introtext  . $item->fulltext);
 			$tags = $doc->getElementsByTagName('img');
 			$tag = $tags->item(0);
 			if(isset($tag)){
 			 $item->image = $tag->getAttribute('src');
 			}
+
 		}
 
 		return $items;

@@ -10,6 +10,8 @@ div.carousel.df {
 	overflow: hidden;
 	padding: 0;
 	margin-bottom:30px;
+    display: inline-block;
+    position: relative;
 }
 
 div.carousel.df div.silhoutte {

@@ -48,26 +48,21 @@ jQuery(document).ready(function($){
         $(this).find("li").eq(currentSlide).children('.texts').fadeIn(200);
     });
     $(".carousel.fp").trigger('move');
-});
 
-function hideCurrentSlideText(){
-    $(".carousel.fp").find("li").find(".texts").fadeOut(200);
-}
 
-//$(window).resize(function(){
-//    if(!$("div.carousel.fp .buttons").is(":visible")){
-//        $("div.carousel.fp, div.carousel.fp div.viewport, div.carousel.fp div.viewport ul.overview li, div.carousel.fp div.viewport ul.overview li div.carousel.fp-item, div.carousel.fp div.viewport ul.overview li").width($("body").width());
-//    } else {
-//        $("div.carousel.fp, div.carousel.fp div.viewport, div.carousel.fp div.viewport ul.overview li, div.carousel.fp div.viewport ul.overview li div.carousel.fp-item, div.carousel.fp div.viewport ul.overview li").width(643);
-//    }
-//});
-
-function viewport() {
-    var e = window, a = 'inner';
-    if (!('innerWidth' in window )) {
-        a = 'client';
-        e = document.documentElement || document.body;
+    function hideCurrentSlideText(){
+        $(".carousel.fp").find("li").find(".texts").fadeOut(200);
     }
-    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
-}
+
+    function viewport() {
+        var e = window, a = 'inner';
+        if (!('innerWidth' in window )) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+        return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+    }
+
+
+});
 

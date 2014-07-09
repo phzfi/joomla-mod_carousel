@@ -17,12 +17,13 @@ jQuery(document).ready(function($){
         intervalTime: 5000,
     	axis: "x"
     });
+
+    $(window).resize(function(){
+        if(!$("div.carousel.df .buttons").is(":visible")){
+            $("div.carousel.df, div.carousel.df div.viewport, div.carousel.df div.viewport ul.overview li, div.carousel.df div.viewport ul.overview li div.carousel.df-item, div.carousel.df div.viewport ul.overview li").width($("body").width());
+        } else {
+            $("div.carousel.df, div.carousel.df div.viewport, div.carousel.df div.viewport ul.overview li, div.carousel.df div.viewport ul.overview li div.carousel.df-item, div.carousel.df div.viewport ul.overview li").width(643);
+        }
+    });
 });
 
-$(window).resize(function(){
-    if(!$("div.carousel.df .buttons").is(":visible")){
-        $("div.carousel.df, div.carousel.df div.viewport, div.carousel.df div.viewport ul.overview li, div.carousel.df div.viewport ul.overview li div.carousel.df-item, div.carousel.df div.viewport ul.overview li").width($("body").width());
-    } else {
-        $("div.carousel.df, div.carousel.df div.viewport, div.carousel.df div.viewport ul.overview li, div.carousel.df div.viewport ul.overview li div.carousel.df-item, div.carousel.df div.viewport ul.overview li").width(643);
-    }
-});
